@@ -67,6 +67,26 @@
                 <ul class="nav navbar-nav navbar-left">
                     <li><a href=""></a></li>
                 </ul>
+
+                <?php
+
+                $hour      = date('H');
+                $greet_User_title = "";
+                if ($hour >= 20) {
+                    $greetings = "Good Night";
+                    $greet_User_title = $greetings;
+                } elseif ($hour > 17) {
+                $greetings = "Good Evening";
+                $greet_User_title = $greetings;
+                } elseif ($hour > 11) {
+                    $greetings = "Good Afternoon";
+                    $greet_User_title = $greetings;
+                } elseif ($hour < 12) {
+                $greetings = "Good Morning";
+                $greet_User_title = $greetings;
+                }
+                
+                ?>
                 
             
                <?php if(isset($_SESSION['user_is_logged_in'])){
@@ -79,7 +99,7 @@
                 <?php { ?>
            
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Welcome Guest!</a></li>
+                    <li><a href="#"><?php echo $greet_User_title ?> Guest!</a></li>
 <!--
                    <li><a href="index.php">Login</a></li>
                    <li><a href="">Register</a></li>

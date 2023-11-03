@@ -63,11 +63,27 @@ if(isset($_POST['submit_login'])){
         $_SESSION['user_is_logged_in']  =  true;
         
         redirect('admin/my_admin.php');
-        
+
+
+        $hour      = date('H');
+        $greet_User_title = "";
+        if ($hour >= 20) {
+            $greetings = "Good Night";
+            $greet_User_title = $greetings;
+        } elseif ($hour > 17) {
+        $greetings = "Good Evening";
+        $greet_User_title = $greetings;
+        } elseif ($hour > 11) {
+            $greetings = "Good Afternoon";
+            $greet_User_title = $greetings;
+        } elseif ($hour < 12) {
+        $greetings = "Good Morning";
+        $greet_User_title = $greetings;
+        }
         
         keepmsg('<div class="alert alert-success text-center">
                       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                      <strong>Welcome </strong>' . $d_name . ' You are logged in as Admin 
+                      <strong>' .$greet_User_title.'  </strong>' . $d_name . ' You are logged in as Admin 
                 </div>');
         
         
