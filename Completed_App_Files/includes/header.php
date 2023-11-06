@@ -72,7 +72,7 @@
 
                 $hour      = date('H');
                 $greet_User_title = "";
-                if ($hour >= 20) {
+                if ($hour >= 23) {
                     $greetings = "Good Night";
                     $greet_User_title = $greetings;
                 } elseif ($hour > 17) {
