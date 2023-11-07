@@ -70,6 +70,7 @@
 
                 <?php
 
+                date_default_timezone_set('Europe/London'); // remove this line of code if you want to use west africa time zone which is an hour ahead of Uk time zone
                 $hour      = date('H');
                 $greet_User_title = "";
                 if ($hour >= 23) {
