@@ -5,19 +5,19 @@ class Pdocon{
     // The connection Properties
     
     //Localhost Db information
-        private $host       = "localhost:33066";
-        private $user       = "root";
-        private $pass       = "";
-        private $dbnm       = "cus_app";
+        // private $host       = "localhost:33066";
+        // private $user       = "root";
+        // private $pass       = "";
+        // private $dbnm       = "cus_app";
   
 	    //remote site db information
-        // private $cleardb_url        =  parse_url(getenv("CLEARDB_DATABASE_URL"));
-        // private $host               =  $cleardb_url["host"];
-        // private $user               =  $cleardb_url["user"];
-        // private $pass               =  $cleardb_url["pass"];
-        // private $dbnm               =  substr($cleardb_url["path"],1);
-        // $active_group               =  'default';
-        // $query_builder              =  TRUE;
+        private $cleardb_url        =  parse_url(getenv("CLEARDB_DATABASE_URL"));
+        private $host               =  $cleardb_url["host"];
+        private $user               =  $cleardb_url["user"];
+        private $pass               =  $cleardb_url["pass"];
+        private $dbnm               =  substr($cleardb_url["path"],1);
+        $active_group               =  'default';
+        $query_builder              =  TRUE;
 
 
     //Handle our connection
