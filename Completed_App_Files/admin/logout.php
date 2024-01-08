@@ -5,7 +5,8 @@ unset($_SESSION['user_is_logged_in']);
 
 session_destroy(); 
 
-header("Location: ../index.php");//use for the redirection to some page  
+//header("Location:cus_manager/index.php");//use for the redirection to some page  
+header("Location: /cus_manager");
 
 
 ?>

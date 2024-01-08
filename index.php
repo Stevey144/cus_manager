@@ -1,10 +1,10 @@
-<?php include('includes/header.php'); ?>
+<?php include('Completed_App_Files/includes/header.php'); ?>
 
 
 <?php
 
 //Include functions
-include('admin/includes/functions.php');
+include('Completed_App_Files/admin/includes/functions.php');
 
 //check to see if user if logged in else redirect to index page 
 
@@ -16,7 +16,7 @@ include('admin/includes/functions.php');
 
 //require or include your database connection file
 //require database class files
-require('admin/includes/pdocon.php');
+require('Completed_App_Files/admin/includes/pdocon.php');
     
 //instatiating our database objects
 $db = new Pdocon;
@@ -62,7 +62,7 @@ if(isset($_POST['submit_login'])){
         
         $_SESSION['user_is_logged_in']  =  true;
         
-        redirect('admin/my_admin.php');
+        redirect('Completed_App_Files/admin/my_admin.php');
 
         date_default_timezone_set('Europe/London'); // remove this line of code if you want to use west africa time zone which is an hour ahead of Uk time zone
         $hour      = date('H');
@@ -136,4 +136,4 @@ if(isset($_POST['submit_login'])){
 </div>
   
   
-<?php include('includes/footer.php'); ?>
+<?php include('Completed_App_Files/includes/footer.php'); ?>
