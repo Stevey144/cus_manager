@@ -1,6 +1,12 @@
 {
+    "config": {
+        "platform": {
+            "php": "8.2.14"
+        }
+    },
+    
     "require": {
-    "PHP": "8.2.0"
+        "php": "^8.2"
     },
     "scripts": {
         "web": "php index.php"
