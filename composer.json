@@ -1,7 +1,4 @@
 {
-    "require": {
-    "PHP": "8.2.0"
-    },
     "scripts": {
         "web": "php index.php"
     }
