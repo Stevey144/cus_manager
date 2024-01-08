@@ -5,21 +5,16 @@ class Pdocon{
     // The connection Properties
     
     //Localhost Db information
-        // private $host       = "localhost:33066";
-        // private $user       = "root";
-        // private $pass       = "";
-        // private $dbnm       = "cus_app";
+
+    private $cleardb_url;
+    private $host;
+    private $user;
+    private $pass;
+    private $dbnm;
+    private $active_group;
+    private $query_builder;
   
-	    //remote site db information
-        private $cleardb_url        =  parse_url(getenv("CLEARDB_DATABASE_URL"));
-        private $host               =  $cleardb_url["host"];
-        private $user               =  $cleardb_url["user"];
-        private $pass               =  $cleardb_url["pass"];
-        private $dbnm               =  substr($cleardb_url["path"],1);
-        $active_group               =  'default';
-        $query_builder              =  TRUE;
-
-
+   //remote site db information
     //Handle our connection
         private $dbh;
     
@@ -33,6 +28,16 @@ class Pdocon{
     //Method to open our connection
 
         public function __construct(){
+
+            $this->cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+            $this->host = $this->cleardb_url["host"];
+            $this->user = $this->cleardb_url["user"];
+            $this->pass = $this->cleardb_url["pass"];
+            $this->dbnm = substr($this->cleardb_url["path"], 1);
+
+        // Other configuration
+        $this->active_group = 'default';
+        $this->query_builder = true;
             
         $dsn ="mysql:host=" . $this->host . "; dbname=" . $this->dbnm; 
     
