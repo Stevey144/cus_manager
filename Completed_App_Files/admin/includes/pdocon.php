@@ -4,8 +4,14 @@ class Pdocon{
     
     // The connection Properties
     
-    //Localhost Db information
+      //Localhost Db information
+        //  private $host       = "localhost:33066";
+        // private $user       = "root";
+        // private $pass       = "";
+        // private $dbnm       = "cus_app";
 
+        
+//remote site db information
     private $cleardb_url;
     private $host;
     private $user;
@@ -13,8 +19,7 @@ class Pdocon{
     private $dbnm;
     private $active_group;
     private $query_builder;
-  
-   //remote site db information
+   
     //Handle our connection
         private $dbh;
     

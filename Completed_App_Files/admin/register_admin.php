@@ -121,7 +121,7 @@ if(isset($_POST['submit_login'])){
   
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
-          <p class=""><a class="pull-right" href="../index.php"> Login</a></p><br>
+          <p class=""><a class="pull-right" href="/"> Login</a></p><br>
       </div>
       <div class="col-md-4 col-md-offset-4">
         <form class="form-horizontal" role="form" method="post" action="register_admin.php" enctype="multipart/form-data">
