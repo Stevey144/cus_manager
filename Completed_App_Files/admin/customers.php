@@ -1,4 +1,7 @@
-<?php include('includes/header.php'); ?>
+<?php 
+include('includes/header.php'); 
+
+?>
 
 
 <?php
@@ -26,7 +29,17 @@ $results=$db->fetchMultiple();
 
 ?>
 
+    <style>
 
+    @media(min-width:400px) {
+    .jumbotron {
+      width:1000px;
+      } 
+     
+    }
+
+
+    </style>
 
   <div class="container">
 

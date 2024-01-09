@@ -40,7 +40,7 @@ class Pdocon{
             $this->pass = $this->cleardb_url["pass"];
             $this->dbnm = substr($this->cleardb_url["path"], 1);
 
-        // Other configuration
+        //Other configuration
         $this->active_group = 'default';
         $this->query_builder = true;
             
