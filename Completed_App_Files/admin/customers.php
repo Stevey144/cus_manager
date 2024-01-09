@@ -1,3 +1,14 @@
+
+<style>
+@media(min-width:400px) {
+.jumbotron {
+  width: 1000px;
+  margin: 0 auto;
+  } 
+}
+</style>
+
+
 <?php 
 include('includes/header.php'); 
 
@@ -29,17 +40,6 @@ $results=$db->fetchMultiple();
 
 ?>
 
-    <style>
-
-    @media(min-width:400px) {
-    .jumbotron {
-      width: 1000px;
-      margin: 0 auto;
-      } 
-    }
-
-
-    </style>
 
   <div class="container">
 
@@ -60,7 +60,7 @@ $results=$db->fetchMultiple();
             <th class="text-center">Full Name</th>
             <th class="text-center">Spending</th>
             <th class="text-center">Email</th>
-            <th class="text-center">Password</th>
+            <!-- <th class="text-center">Password</th> -->
             <th class="text-center">Report</th>
           </tr>
         </thead>
@@ -71,7 +71,7 @@ $results=$db->fetchMultiple();
             <td><?php echo $result['fullname']?></td>
             <td><?php echo $result['spending_amt']?></td>
             <td><?php echo $result['email']?></td>
-            <td><?php echo $result['password']?></td>
+            <!-- <td><?php echo $result['password']?></td> -->
             <td><a href="reports.php?cus_id=<?php echo $result['id']?>" class='btn btn-primary'>View Report</a></td>
             <td><a href="edit.php?cus_id=<?php echo $result['id']?>" class='btn btn-danger'>Edit</a></td>
             
