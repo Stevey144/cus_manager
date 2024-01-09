@@ -33,9 +33,9 @@ $results=$db->fetchMultiple();
 
     @media(min-width:400px) {
     .jumbotron {
-      width:1000px;
+      width: 1000px;
+      margin: 0 auto;
       } 
-     
     }
 
 
